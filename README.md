@@ -18,27 +18,31 @@ Aufruf: snpgrdl.sh [-htf] [-k keep] <Datasetfilter> [Snapshotfilter]
 ### Beispiele:
 Nur Filtern (ohne löschen):
 ```
-root@zfsrasp:~# ./snpgrdl.sh  backup$ daily
+root@zfsrasp:~# ./snpgrdl.sh  backup frequent
 # Gefilterte Datasets:
   NAME                USED  AVAIL     REFER  MOUNTPOINT
-  backup             4.02M  3.62G       24K  /backup
+  backup             3.93M  3.62G       24K  /backup
+  backup/smbshr       182K  3.62G     50.5K  /backup/smbshr
 
 # Dataset: backup
-# Snapfilter: daily
-# Anzahl Snaps: 12
+# Snapfilter: frequent
+# Anzahl Snaps: 4
 # Liste Snaps:
-  + backup@zfs-auto-snap_daily-2020-12-21-0525
-  + backup@zfs-auto-snap_daily-2020-12-22-0525
-  + backup@zfs-auto-snap_daily-2020-12-23-0525
-  + backup@zfs-auto-snap_daily-2020-12-24-0525
-  + backup@zfs-auto-snap_daily-2020-12-25-0525
-  + backup@zfs-auto-snap_daily-2020-12-26-0525
-  + backup@zfs-auto-snap_daily-2020-12-27-0525
-  + backup@zfs-auto-snap_daily-2020-12-28-0525
-  + backup@zfs-auto-snap_daily-2020-12-29-0525
-  + backup@zfs-auto-snap_daily-2020-12-30-0525
-  + backup@zfs-auto-snap_daily-2020-12-31-0525
-  + backup@zfs-auto-snap_daily-2021-01-01-0525
+  + backup@zfs-auto-snap_frequent-2021-01-01-2030
+  + backup@zfs-auto-snap_frequent-2021-01-01-2045
+  + backup@zfs-auto-snap_frequent-2021-01-01-2100
+  + backup@zfs-auto-snap_frequent-2021-01-01-2115
+
+# Dataset: backup/smbshr
+# Snapfilter: frequent
+# Anzahl Snaps: 6
+# Liste Snaps:
+  + backup/smbshr@zfs-auto-snap_frequent-2020-12-28-1145
+  + backup/smbshr@zfs-auto-snap_frequent-2020-12-28-1200
+  + backup/smbshr@zfs-auto-snap_frequent-2021-01-01-2030
+  + backup/smbshr@zfs-auto-snap_frequent-2021-01-01-2045
+  + backup/smbshr@zfs-auto-snap_frequent-2021-01-01-2100
+  + backup/smbshr@zfs-auto-snap_frequent-2021-01-01-2115
 
 root@zfsrasp:~#
 ```
