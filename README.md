@@ -115,7 +115,11 @@ root@zfsrasp:~# ./snpgrdl.sh -t -k 5 backup$ daily
   + backup@zfs-auto-snap_daily-2020-12-31-0525
   + backup@zfs-auto-snap_daily-2021-01-01-0525
 # Testmodus - Für folgende Snapshots würde ein destroy ausgeführt:
-  backup@zfs-auto-snap_daily-2020-12-23-0525    creation        Wed Dec 23  6:25 2020            -  backup@zfs-auto-snap_daily-2020-12-24-0525    creation        Thu Dec 24  6:25 2020            -  backup@zfs-auto-snap_daily-2020-12-25-0525    creation        Fri Dec 25  6:25 2020            -  backup@zfs-auto-snap_daily-2020-12-26-0525    creation        Sat Dec 26  6:25 2020            -  backup@zfs-auto-snap_daily-2020-12-27-0525    creation        Sun Dec 27  6:25 2020            -
+  backup@zfs-auto-snap_daily-2020-12-23-0525    creation        Wed Dec 23  6:25 2020            -
+  backup@zfs-auto-snap_daily-2020-12-24-0525    creation        Thu Dec 24  6:25 2020            -
+  backup@zfs-auto-snap_daily-2020-12-25-0525    creation        Fri Dec 25  6:25 2020            -
+  backup@zfs-auto-snap_daily-2020-12-26-0525    creation        Sat Dec 26  6:25 2020            -
+  backup@zfs-auto-snap_daily-2020-12-27-0525    creation        Sun Dec 27  6:25 2020            -
 root@zfsrasp:~#
 ```
 
