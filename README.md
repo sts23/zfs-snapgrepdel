@@ -5,9 +5,9 @@ Zu löschende Snapshots werden mit einem '-' gekennzeichnet.
 
 ### Aufruf:
 ```  
-root@zfsrasp~# ./snpgrdl.sh -h
+root@zfsrasp~# ./snpgrpdl.sh -h
 
-Aufruf: snpgrdl.sh [-htf] [-k keep] <Datasetfilter> [Snapshotfilter]
+Aufruf: snpgrpdl.sh [-htf] [-k keep] <Datasetfilter> [Snapshotfilter]
 
         -h Hilfe Anzeigen
         -t Testmodus. Simulation von löschen ohne Nachfragen (benötigt -k)
@@ -18,7 +18,7 @@ Aufruf: snpgrdl.sh [-htf] [-k keep] <Datasetfilter> [Snapshotfilter]
 ### Beispiele:
 Nur Filtern (ohne löschen):
 ```
-root@zfsrasp:~# ./snpgrdl.sh  backup frequent
+root@zfsrasp:~# ./snpgrpdl.sh  backup frequent
 # Gefilterte Datasets:
   NAME                USED  AVAIL     REFER  MOUNTPOINT
   backup             3.93M  3.62G       24K  /backup
@@ -48,7 +48,7 @@ root@zfsrasp:~#
 ```
 Interaktiv - Filtern und alle außer die letzten 10 löschen:
 ```
-root@zfsrasp:~# ./snpgrdl.sh -k 10 backup$ daily
+root@zfsrasp:~# ./snpgrpdl.sh -k 10 backup$ daily
 # Gefilterte Datasets:
   NAME                USED  AVAIL     REFER  MOUNTPOINT
   backup             4.00M  3.62G       24K  /backup
@@ -93,7 +93,7 @@ root@zfsrasp:~#
 ```
 Testmodus - löschen nur simulieren (ohne Nachfragen):
 ```
-root@zfsrasp:~# ./snpgrdl.sh -t -k 5 backup$ daily
+root@zfsrasp:~# ./snpgrpdl.sh -t -k 5 backup$ daily
 # Gefilterte Datasets:
   NAME                USED  AVAIL     REFER  MOUNTPOINT
   backup             3.98M  3.62G       24K  /backup
@@ -125,7 +125,7 @@ root@zfsrasp:~#
 
 Forcemodus - löschen ohne Nachfragen:
 ```
-root@zfsrasp:~# ./snpgrdl.sh -f -k 6 backup frequent
+root@zfsrasp:~# ./snpgrpdl.sh -f -k 6 backup frequent
 # Gefilterte Datasets:
   NAME                USED  AVAIL     REFER  MOUNTPOINT
   backup             3.98M  3.62G       24K  /backup
