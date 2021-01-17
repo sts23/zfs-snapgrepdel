@@ -9,7 +9,8 @@ Aufruf: $(basename $0) [-htf] [-k keep] <Datasetfilter> [Snapshotfilter]
         -t Testmodus. Simulation von löschen ohne Nachfragen (benötigt -k) 
         -f Echtmodus. Snapshots löschen ohne Nachfragen (benötigt -k) 
         -k <Anzahl> Anzahl der letzten Snapshots die behalten werden sollen.
-           Rest wird gelöscht. Ohne -t oder -f kommt Abfrage ob gelöscht werden soll.
+           Rest wird gelöscht. Ohne -t oder -f kommt Abfrage ob gelöscht
+           werden soll.
 
 ENDE
 }
