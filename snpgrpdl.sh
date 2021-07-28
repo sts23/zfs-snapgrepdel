@@ -76,10 +76,10 @@ then
   fi
 fi
 
-ZFSSETLIST=$(zfs list | grep "$FILTER" | awk '{print $1}')
+ZFSSETLIST=$(zfs list -o name | grep "$FILTER")
 
 echo "# Gefilterte Datasets:"
-zfs list | grep -e "$FILTER" -e NAME | sed 's/^/  /'
+echo "$ZFSSETLIST" | sed 's/^/  /'
 echo ""
 
 for DATASET in $ZFSSETLIST
